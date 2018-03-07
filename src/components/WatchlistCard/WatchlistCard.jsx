@@ -1,16 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import './WatchlistCard.css';
 
 
 export default class WatchlistCard extends React.Component {
-	static PropTypes = {
-		title: PropTypes.string.isRequired,
-		text: PropTypes.string.isRequired,
-		rating: PropTypes.number.isRequired,
-		release: PropTypes.number.isRequired,
-		poster: PropTypes.string.isRequired,
-		DeleteMovieCard: PropTypes.func
+	static propTypes = {
+		title: propTypes.string.isRequired,
+		rating: propTypes.number.isRequired,
+		release: propTypes.number.isRequired,
+		poster: propTypes.string.isRequired,
+		DeleteMovieCard: propTypes.func
 	};
 
 	static defaultProps = {
@@ -18,7 +17,7 @@ export default class WatchlistCard extends React.Component {
 	};
 
 	render() {
-		const { title, text, rating, release, poster, DeleteMovieCard } = this.props;
+		const { title, rating, release, poster, DeleteMovieCard } = this.props;
 
 		return (
 			<div className="WatchlistCard">

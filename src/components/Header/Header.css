@@ -12,6 +12,11 @@
 	text-transform: capitalize;
 }
 
+.Header__logo a {
+	text-decoration: none;
+	color: #424242;
+}
+
 .Navigation {
 	display: flex;
 	display: -ms-flexbox;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './MoviesPage.css';
-import App__sidebar from '../App__sidebar/App__sidebar';
+import MoviesPageSidebar from '../MoviesPageSidebar/MoviesPageSidebar';
 import SearchForm from '../SearchForm/SearchForm';
 import SearchCategories from '../SearchCategories/SearchCategories';
 import WatchList from '../WatchList/WatchList';
@@ -115,18 +115,16 @@ class MoviesPage extends React.Component {
 	}
 
 	render() {
-		console.log(this.props.match.path);
-	
 		const { movieCards, emptyCard, watchlist } = this.state;
 		localStorage.setItem('movie-mate-watchlist', JSON.stringify(this.state.watchlist));
 
 		return (
 			<div className="MoviesPage">
-				<App__sidebar>
+				<MoviesPageSidebar>
 					<SearchForm getMovies={this.searchMovieList} />
 					<SearchCategories onSetSearchValues={this.setCategoryList} />
 					<WatchList watchlist={watchlist} DeleteMovieCardToMovieList={this.deleteMovieCard} />
-				</App__sidebar>
+				</MoviesPageSidebar>
 				<MovieList movieCards={movieCards}  AddMovieCardToMovieList={this.addMovieCard} getEmptyCard={emptyCard} />	
 			</div>
 		);

@@ -17,7 +17,6 @@ const SearchForm = ({ getMovies }) => {
 	return (
 		<form className="SearchForm" onSubmit={onFormSubmit} ref={node => (form = node)}>
 			<input className="SearchForm__input" placeholder="Search for movies by name..." type="text" ref={node => (input = node)} />
-			<button className="SearchForm__btn" type="submit">search</button>
 		</form>		
 	);
 }

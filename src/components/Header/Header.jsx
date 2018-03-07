@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import Nav from '../Nav/Nav';
+import HeaderNav from '../HeaderNav/HeaderNav';
 
 
 class Header extends React.Component {
@@ -13,10 +12,10 @@ class Header extends React.Component {
 
 		return (
 			<header className="Header">
-				<h1 className="Header__logo">{text}</h1>
+				<h1 className="Header__logo"><Link exact to="/">{text}</Link></h1>
 				<nav className="Navigation">
-					{items.map(i => (
-						<Nav to={i.path} onClick={this.handleClick} myKey={i.text} text={i.text} />
+					{items.map((i,idx) => (
+						<HeaderNav to={i.path} myKey={idx} text={i.text} />
 						))}
 				</nav>
 			</header>
@@ -24,10 +23,10 @@ class Header extends React.Component {
 	}
 }
 
-Header.PropTypes = {
-	items: PropTypes.arrayOf(PropTypes.shape({
-		path: PropTypes.string.isRequired,
-		text: PropTypes.string.isRequired
+Header.propTypes = {
+	items: propTypes.arrayOf(propTypes.shape({
+		path: propTypes.string.isRequired,
+		text: propTypes.string.isRequired
 	}).isRequired).isRequired
 }
 

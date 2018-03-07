@@ -1,20 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import './MovieList.css';
 import MovieCard from '../MovieCard/MovieCard';
 
 class MovieList extends React.Component {
 	static propTypes = {
-		movieCards: PropTypes.arrayOf(PropTypes.shape({
-			id: PropTypes.string.isRequired,
-			title: PropTypes.string.isRequired,
-			text: PropTypes.string.isRequired,
-			rating: PropTypes.number.isRequired,
-			release: PropTypes.number.isRequired,
-			poster: PropTypes.string.isRequired
+		movieCards: propTypes.arrayOf(propTypes.shape({
+			id: propTypes.string.isRequired,
+			title: propTypes.string.isRequired,
+			text: propTypes.string.isRequired,
+			rating: propTypes.number.isRequired,
+			release: propTypes.number.isRequired,
+			poster: propTypes.string.isRequired
 		}).isRequired).isRequired,
-		AddMovieCardToMovieList: PropTypes.func.isRequired,
-		getEmptyCard: PropTypes.string.isRequired		
+		AddMovieCardToMovieList: propTypes.func.isRequired,
+		getEmptyCard: propTypes.number.isRequired		
 	};
 
 	render() {

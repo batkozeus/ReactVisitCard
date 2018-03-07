@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import './AboutPage.css';
-import MovieCard from '../MovieCard/MovieCard';
+
 
 class AboutPage extends React.Component {
 

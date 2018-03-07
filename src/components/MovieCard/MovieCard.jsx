@@ -1,16 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import './MovieCard.css';
 
 
 export default class MovieCard extends React.Component {
-	static PropTypes = {
-		title: PropTypes.string.isRequired,
-		text: PropTypes.string.isRequired,
-		rating: PropTypes.number.isRequired,
-		release: PropTypes.number.isRequired,
-		poster: PropTypes.string.isRequired,
-		AddMovieCard: PropTypes.func
+	static propTypes = {
+		title: propTypes.string.isRequired,
+		text: propTypes.string.isRequired,
+		rating: propTypes.number.isRequired,
+		release: propTypes.number.isRequired,
+		poster: propTypes.string.isRequired,
+		AddMovieCard: propTypes.func
 	};
 
 	static defaultProps = {

@@ -24,27 +24,15 @@ const navLinks = [
 
 class App extends React.Component {
 
-	state = {
-		mainPath: ''
-	};
-
-	// componentWillMount() {
-	// 	this.setState({
-	// 		mainPath: true
-	// 	});
-	// };
-
 	render() {
-		// console.log(this.props);
-
 		return (
 			<div className="App">
 				<Header text="Movie Mate" items={navLinks} />
 
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route path="/movies" component={MoviesPage} />
-					<Route path="/about" component={AboutPage} />
+					<Route exact path="/movies" component={MoviesPage} />
+					<Route exact path="/about" component={AboutPage} />
 					<Redirect to="/" />
 				</Switch>
 

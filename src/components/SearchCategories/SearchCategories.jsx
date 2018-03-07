@@ -1,6 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import './SearchCategories.css';
+
 
 const listCategoriesButtons = {
 	'001': {
@@ -19,17 +20,33 @@ const listCategoriesButtons = {
 
 class SearchCategories extends React.Component {
 	static propTypes = {
-		onSetSearchValues: PropTypes.func.isRequired
+		onSetSearchValues: propTypes.func.isRequired
+	};
+
+	state = {
+		isChosen: 'popular'
 	};
 
 	_searchValues = (evt) => {
 		this.props.onSetSearchValues(evt.target.id);
+
+		this.setState({
+			isChosen: evt.target.id
+		});
 	};
 
 	render() {
 		return (
 			<div className="SearchCategories">
-				{Object.keys(listCategoriesButtons).map(key => <button className="SearchCategories__btn" id={listCategoriesButtons[key].id} onClick={this._searchValues}>{listCategoriesButtons[key].title}</button>)}
+				{Object.keys(listCategoriesButtons).map(key => {
+					if (listCategoriesButtons[key].id === this.state.isChosen) {
+						return (<button className="SearchCategories__btn SearchCategories__btn--active" id={listCategoriesButtons[key].id} onClick={this._searchValues}>{listCategoriesButtons[key].title}</button>)
+					}
+					else {
+						return (<button className="SearchCategories__btn" id={listCategoriesButtons[key].id} onClick={this._searchValues}>{listCategoriesButtons[key].title}</button>)
+					}
+				}			
+				)}
 			</div>		
 		);
 	}
