@@ -6,7 +6,7 @@ import MovieCard from '../MovieCard/MovieCard';
 class MovieList extends React.Component {
 	static propTypes = {
 		movieCards: propTypes.arrayOf(propTypes.shape({
-			id: propTypes.string.isRequired,
+			id: propTypes.number.isRequired,
 			title: propTypes.string.isRequired,
 			text: propTypes.string.isRequired,
 			rating: propTypes.number.isRequired,

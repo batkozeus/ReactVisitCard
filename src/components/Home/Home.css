@@ -1,24 +1,32 @@
-.MovieList {
-	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	flex: 0 0 78%;
+.Home {
+	padding: 50px 0;
+	color: #424242;
 }
 
-.MovieList__item {
-	width: 25%;
-	padding: 20px;
+.Home__icon {
+	display: block;
+	margin: auto;
+	width: 200px;
+	height: auto;
 }
 
-.MovieList__msg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 100%;
+.Home__title {
+	margin-bottom: 50px;
+	margin-top: 50px;
 	text-align: center;
-	color: #fff;
-	font-size: 38px;
-	line-height: 1.5;
-	text-transform: uppercase;
+}
+
+.Home__text {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.Home__link {
+    display: inline-block;
+    margin-left: 5px;
+    color: #424242;
+    text-decoration: underline;
 }

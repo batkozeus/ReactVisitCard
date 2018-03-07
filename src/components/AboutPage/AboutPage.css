@@ -1,24 +1,9 @@
-.MovieList {
-	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	flex: 0 0 78%;
+.AboutPage__nav {
+	margin-top: 20px;
+	margin-bottom: 80px;
 }
 
-.MovieList__item {
-	width: 25%;
-	padding: 20px;
-}
-
-.MovieList__msg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 100%;
-	text-align: center;
-	color: #fff;
-	font-size: 38px;
-	line-height: 1.5;
-	text-transform: uppercase;
+.AboutPage__body {
+	width: 70%;
+	margin: auto;
 }
