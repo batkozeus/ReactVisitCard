@@ -1,64 +1,50 @@
-.WatchlistCard {
+.MemberCard {
 	position: relative;
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	padding: 8px;
-	color: #fff;
-	margin-bottom: 16px;	
-	background-color: #424242;
-	border-radius: 2px;
-	box-shadow: 5px 5px 12px 0 rgba(83,77,77,.3);
-	transition: all .3s ease-out;
-	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	border: 6px solid #424242;
 }
 
-.WatchlistCard:hover {
-	box-shadow: 5px 5px 12px 0 #534d4d;
+.MemberCard::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-color: rgba(0,0,0,.4);
 }
 
-.WatchlistCard__img {
+.MemberCard__img {
 	display: block;
-	width: 40%;
-	height: 100px;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 }
 
-.WatchlistCard__body {
-	width: 55%;
-}
-
-.WatchlistCard__title {
-	font-size: 16px;
-	line-height: 1.5;
-}
-
-.WatchlistCard__release, .WatchlistCard__rating {
-	font-size: 14px;
-	margin-top: 8px;
-}
-
-.WatchlistCard__btn {
+.MemberCard__info {
 	position: absolute;
-	outline: 0;
-	border: 0;
-	background-color: #424242;
+	text-align: center;
 	color: #fff;
-	cursor: pointer;
-	font-weight: 700;
-	bottom: 8px;
-	right: 8px;
-	width: 35px;
-	height: 35px;
-	font-size: 24px;
-	line-height: 31px;
-	border-radius: 4px;
-	text-transform: capitalize;
-	border: 2px solid #fff;
-	transition: background-color .1s linear;
 }
 
-.WatchlistCard__btn:hover {
+.MemberCard__name {
+	margin-bottom: 16px;
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+.MemberCard__name::after {
+	display: block;
+	content: "";
+	margin: auto;
+	margin-top: 8px;
+	width: 50%;
+	height: 2px;
 	background-color: #fff;
-	color: #424242;
+}
+
+.MemberCard__pos {
+	font-size: 30px;
 }

@@ -1,24 +1,31 @@
-.MovieList {
-	position: relative;
+.TeamList {
 	display: flex;
 	flex-wrap: wrap;
-	flex: 0 0 78%;
+	justify-content: center;
 }
 
-.MovieList__item {
-	width: 25%;
-	padding: 20px;
-}
-
-.MovieList__msg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 100%;
-	text-align: center;
+.TeamList__members {
+	flex: 0 0 20%;
+	margin-right: 5%;
 	color: #424242;
-	font-size: 38px;
+	font-size: 18px;
 	line-height: 1.5;
-	text-transform: uppercase;
+}
+
+.TeamList__members__link {
+	display: inline-block;
+	padding: 4px 16px;
+	font-size: 24px;
+	color: #424242;
+}
+
+.TeamList__members__link--active {
+	background-color: #424242;
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.TeamList__card {
+	width: 400px;
 }

@@ -9,7 +9,7 @@ const AboutNav = ({ items, currentPath }) => {
 	return (
 		<nav className="AboutNav">
 			{items.map((i, idx) => (
-				<li><NavLink exact to={`${currentPath}${i.path}`} className="AboutNav__link" activeClassName="AboutNav__link--active" key={idx}>{i.text}</NavLink></li>
+				<NavLink exact to={`${currentPath}${i.path}`} className="AboutNav__link" activeClassName="AboutNav__link--active" key={idx}>{i.text}</NavLink>
 			))}
 		</nav>
 	);

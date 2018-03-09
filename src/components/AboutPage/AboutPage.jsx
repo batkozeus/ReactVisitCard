@@ -4,6 +4,8 @@ import { Route, Switch } from 'react-router-dom';
 import './AboutPage.css';
 import AboutNav from '../AboutNav/AboutNav';
 import TeamList from '../TeamList/TeamList';
+import CareerInfo from '../CareerInfo/CareerInfo';
+import StackList from '../StackList/StackList';
 
 
 const aboutLinks = [
@@ -32,8 +34,8 @@ const AboutPage = (props) => {
 			<div className="AboutPage__body">
 				<Switch>
 					<Route path={`${props.match.path}/team`} component={TeamList} />
-					<Route path={`${props.match.path}/stack`} render={() => <h2>Users Page</h2>} />
-					<Route path={`${props.match.path}/career`} render={() => <h2>Users Page</h2>} />
+					<Route path={`${props.match.path}/stack`} component={StackList} />
+					<Route path={`${props.match.path}/career`} component={CareerInfo} />
 				</Switch>
 			</div>
 		</div>

@@ -37,7 +37,7 @@ const TeamList = ({ match }) => {
 					const user = getUserByID(users, userID);
 					
 					return user ? <MemberCard {...user} {...props} />
-					: <h1>SORRY, USER NOT FOUND!</h1>;
+					: <p></p>;
 
 
 				}} />
