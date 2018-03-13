@@ -5,9 +5,17 @@ import './HeaderNav.css';
 
 
 const HeaderNav = ({ to, myKey, text }) => {
-	return (
-		<NavLink exact to={to} className="Navigation__link" activeClassName="Navigation__link--active" key={myKey}>{text}</NavLink>
-	);
+	if ( to == '/') {
+		return (
+			<NavLink exact={true} to={to} className="Navigation__link" activeClassName="Navigation__link--active" key={myKey}>{text}</NavLink>
+		);
+	}
+	else {
+		return (
+			<NavLink to={to} className="Navigation__link" activeClassName="Navigation__link--active" key={myKey}>{text}</NavLink>
+		);
+	}
+	
 }
 
 HeaderNav.propTypes = {

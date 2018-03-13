@@ -27,7 +27,7 @@ const TeamList = ({ match }) => {
 		<div className="TeamList">
 			<ul className="TeamList__members">
 				{ourTeamLinks.map((tl, idx) => (
-					<li><NavLink exact to={tl.path} className="TeamList__members__link" activeClassName="TeamList__members__link--active" key={idx}>{tl.name}</NavLink></li>
+					<li><NavLink to={tl.path} className="TeamList__members__link" activeClassName="TeamList__members__link--active" key={idx}>{tl.name}</NavLink></li>
 				))}
 			</ul>
 			<div className="TeamList__card">
